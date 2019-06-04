@@ -18,6 +18,7 @@ public class Hook extends BaseUtil{
     public void InitializeTest(Scenario scenario) {
         System.out.println("Opening the browser : Chrome");
         //Chrome driver
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
         base.Driver = new ChromeDriver();
     }
 

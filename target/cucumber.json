@@ -1,0 +1,80 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1749846874,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.InitializeTest(Scenario)"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Adding 2 videos to favourite in discovery",
+        "description": "",
+        "id": "discovery-add-videos-to-favourite-functionality;adding-2-videos-to-favourite-in-discovery",
+        "after": [
+          {
+            "result": {
+              "duration": 165324082,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.TearDownTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 80536738202,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "a user goes to discovery homepage",
+            "match": {
+              "location": "DiscoveryStep.openUrl()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4427170984,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "a user adds videos to favourite",
+            "match": {
+              "location": "DiscoveryStep.addToFav()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7212852953,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the videos should be visible in my videos section",
+            "match": {
+              "location": "DiscoveryStep.checkInMyVideos()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Discovery Add videos to favourite functionality",
+    "description": "",
+    "id": "discovery-add-videos-to-favourite-functionality",
+    "keyword": "Feature",
+    "uri": "Discovery.feature"
+  }
+]

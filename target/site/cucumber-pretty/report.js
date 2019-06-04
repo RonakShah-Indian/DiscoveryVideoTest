@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 2082322853,
+  "duration": 1810561526,
   "status": "passed"
 });
 formatter.scenario({
@@ -37,25 +37,25 @@ formatter.match({
   "location": "DiscoveryStep.openUrl()"
 });
 formatter.result({
-  "duration": 6717693154,
+  "duration": 5947076648,
   "status": "passed"
 });
 formatter.match({
   "location": "DiscoveryStep.addToFav()"
 });
 formatter.result({
-  "duration": 4419438397,
+  "duration": 485429081,
   "status": "passed"
 });
 formatter.match({
   "location": "DiscoveryStep.checkInMyVideos()"
 });
 formatter.result({
-  "duration": 7594357466,
+  "duration": 3259327951,
   "status": "passed"
 });
 formatter.after({
-  "duration": 144513251,
+  "duration": 150639258,
   "status": "passed"
 });
 });

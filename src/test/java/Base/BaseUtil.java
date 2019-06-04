@@ -1,12 +1,9 @@
 package Base;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,30 +12,30 @@ import java.util.concurrent.TimeUnit;
  */
 public class BaseUtil {
 
-    public static WebDriver Driver;
+    public static WebDriver driver;
     public void swipeToElement(WebElement element){
-        JavascriptExecutor js = (JavascriptExecutor) Driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();",element);
     }
 
     public void hoverOnVideo(WebElement element){
-        Actions action= new Actions(Driver);
+        Actions action= new Actions(driver);
         action.moveToElement(element).build().perform();
     }
 
     public void navigateTo(String url){
-        Driver.navigate().to(url);
-        Driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
-        Driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.navigate().to(url);
+        driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
     public void getUrl(String url){
-        Driver.get(url);
-        Driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
-        Driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.get(url);
+        driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
-    public void waitForAnElement() throws InterruptedException {
-        Thread.sleep(2000);
+    public void waitForAnElement() {
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 }
